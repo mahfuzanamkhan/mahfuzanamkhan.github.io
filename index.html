@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mahfuz Anam Khan — Portfolio</title>
+  <meta name="description" content="Mahfuz Anam Khan — Aspiring Software Engineer | Portfolio" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#0f1720; --muted:#9aa4b2; --accent:#7c5cff; --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(124,92,255,0.08), transparent),
+                  linear-gradient(180deg, rgba(255,255,255,0.01), transparent 30%),
+                  var(--bg);
+      color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px;
+    }
+    .container{max-width:980px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#22c1c3);display:flex;align-items:center;justify-content:center;font-weight:700;color:#08101a}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:14px}
+    nav a:hover{color:var(--accent)}
+
+    main{margin-top:28px}
+
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start}
+    .card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));border-radius:14px;padding:20px;box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+
+    .about h2{margin:0 0 10px;font-size:18px}
+    .about p{margin:0;color:var(--muted)}
+
+    .skills{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+    .chip{background:var(--glass);padding:8px 12px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+
+    .right-card{text-align:center}
+    .avatar-placeholder{width:120px;height:120px;border-radius:16px;margin:0 auto;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:30px;color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
+    .contact-buttons{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;gap:10px;justify-content:center;padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);text-decoration:none;font-weight:600}
+    .btn:hover{border-color:rgba(124,92,255,0.6);color:var(--accent)}
+
+    section.projects{margin-top:28px}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:12px}
+    .project-card{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02)}
+    .project-card h3{margin:0 0 8px;font-size:16px}
+    .project-card p{margin:0;color:var(--muted);font-size:13px}
+    .project-links{margin-top:12px;display:flex;gap:10px}
+    .ghost{padding:8px 10px;border-radius:8px;background:transparent;border:1px dashed rgba(255,255,255,0.03);color:var(--muted);font-size:13px;text-decoration:none}
+    .ghost:hover{border-color:rgba(124,92,255,0.5);color:var(--accent)}
+
+    footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:840px){
+      .hero{grid-template-columns:1fr;}
+      .projects-grid{grid-template-columns:1fr}
+      body{padding:20px}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .accent{color:var(--accent)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">MA</div>
+        <div>
+          <h1>Mahfuz Anam Khan</h1>
+          <p class="lead">Aspiring Software Engineer | Passionate about coding and design</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#" id="download-cv">Download CV</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="card about">
+          <h2>About</h2>
+          <p>Hello! I'm <strong>Mahfuz Anam Khan</strong>, an aspiring software engineer currently building projects and sharpening my skills in web development and programming. I enjoy building clean interfaces and solving problems with code.</p>
+
+          <div class="skills">
+            <div class="chip">HTML</div>
+            <div class="chip">CSS</div>
+            <div class="chip">JavaScript</div>
+            <div class="chip">Python</div>
+            <div class="chip">Git & GitHub</div>
+          </div>
+
+          <section id="projects-section" class="projects">
+            <h2 style="margin-top:18px">Projects</h2>
+            <p class="muted" style="margin-top:6px">No projects yet — here are placeholders you can replace with your projects later.</p>
+
+            <div class="projects-grid" id="projectsGrid">
+              <!-- Project placeholders inserted by JS -->
+            </div>
+          </section>
+
+        </div>
+
+        <aside class="card right-card">
+          <div class="avatar-placeholder">MA</div>
+          <p class="muted" style="margin-top:12px;margin-bottom:6px">HSC Batch 2026 • Aspiring Software Engineer</p>
+
+          <div class="contact-buttons">
+            <a class="btn" href="https://github.com/mahfuzanamkhan" target="_blank">View on GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/mahfuzanamkhan" target="_blank">LinkedIn</a>
+            <a class="btn" href="mailto:mahfuzanamkhan@gmail.com">Email Me</a>
+            <a class="btn" href="https://instagram.com/mahfuzanamkhann" target="_blank">Instagram</a>
+          </div>
+
+          <div style="margin-top:14px;color:var(--muted);font-size:13px">Location: Bangladesh</div>
+        </aside>
+      </div>
+
+      <section id="contact" style="margin-top:20px">
+        <div class="card">
+          <h2>Contact</h2>
+          <p class="muted">Want to collaborate or ask something? Reach out using the links.</p>
+          <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+            <a class="ghost" href="https://github.com/mahfuzanamkhan" target="_blank">GitHub</a>
+            <a class="ghost" href="https://www.linkedin.com/in/mahfuzanamkhan" target="_blank">LinkedIn</a>
+            <a class="ghost" href="mailto:mahfuzanamkhan@gmail.com">Email</a>
+            <a class="ghost" href="https://instagram.com/mahfuzanamkhann" target="_blank">Instagram</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="muted">Made with ❤️ — mahfuzanamkhan.github.io</div>
+    </footer>
+  </div>
+
+  <script>
+    // Placeholder projects data — replace in your repo with real projects later.
+    const projects = [
+      {title:'Personal Portfolio', desc:'A clean personal website to showcase projects and resume. Built with HTML/CSS/JS.', demo:'#', repo:'#'},
+      {title:'To-Do App', desc:'A simple to-do list application with add/remove and local storage.', demo:'#', repo:'#'},
+      {title:'Weather App', desc:'Fetches weather data from OpenWeatherMap API and shows current forecast.', demo:'#', repo:'#'},
+      {title:'Notes App', desc:'Lightweight notes app to save quick text notes in the browser.', demo:'#', repo:'#'}
+    ];
+
+    const grid = document.getElementById('projectsGrid');
+    projects.forEach(p => {
+      const el = document.createElement('div');
+      el.className = 'project-card';
+      el.innerHTML = `<h3>${p.title}</h3><p>${p.desc}</p><div class='project-links'><a class='ghost' href='${p.demo}' target='_blank'>Live</a><a class='ghost' href='${p.repo}' target='_blank'>Code</a></div>`;
+      grid.appendChild(el);
+    });
+
+    // Download CV (simple text file generation)
+    document.getElementById('download-cv').addEventListener('click', (e)=>{
+      e.preventDefault();
+      const cv = `Mahfuz Anam Khan\nAspiring Software Engineer\nEmail: mahfuzanamkhan@gmail.com\nGitHub: https://github.com/mahfuzanamkhan\nLinkedIn: https://www.linkedin.com/in/mahfuzanamkhan`;
+      const blob = new Blob([cv], {type:'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'Mahfuz_Anam_Khan_CV.txt'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
