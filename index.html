@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mahfuz Anam Khan — Portfolio</title>
-  <meta name="description" content="Mahfuz Anam Khan — Aspiring Software Engineer | Portfolio" />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <meta name="description" content="Mahfuz Anam Khan — Aspiring Software Engineer | Passionate about coding and design" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -25,16 +24,16 @@
     }
 
     .container { max-width: 980px; margin: 0 auto; }
-    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
     .brand { display: flex; align-items: center; gap: 14px; }
     .logo { width: 56px; height: 56px; border-radius: 10px; background: linear-gradient(135deg, var(--accent-dark), #22c1c3); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #08101a; }
-    h1 { margin: 0; font-size: 20px; }
+    h1 { margin: 0; font-size: 22px; }
     p.lead { margin: 6px 0 0; color: var(--muted-dark); font-size: 14px; }
 
     nav a { color: var(--muted-dark); text-decoration: none; margin-left: 16px; font-size: 14px; }
     nav a:hover { color: var(--accent-dark); }
 
-    .theme-toggle { cursor: pointer; color: var(--accent-dark); font-size: 14px; margin-left: 20px; }
+    .theme-toggle { cursor: pointer; color: var(--accent-dark); font-size: 14px; margin-left: 20px; user-select: none; }
 
     .card { border-radius: 14px; padding: 20px; box-shadow: 0 6px 30px rgba(2,6,23,0.6); border: 1px solid rgba(255,255,255,0.03); background: var(--card-dark); transition: background 0.3s, color 0.3s; }
     body.light-mode .card { background: var(--card-light); border-color: rgba(0,0,0,0.05); }
@@ -42,9 +41,10 @@
     .hero { display: grid; grid-template-columns: 1fr 320px; gap: 28px; align-items: start; }
 
     .avatar-placeholder { width: 120px; height: 120px; border-radius: 16px; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 30px; color: var(--muted-dark); border: 1px solid rgba(255,255,255,0.03); background: rgba(255,255,255,0.02); }
+    body.light-mode .avatar-placeholder { border-color: rgba(0,0,0,0.1); background: rgba(0,0,0,0.03); color: var(--muted-light); }
 
-    /* You can replace the placeholder below with your actual profile picture like this:
-       <img src="your-photo.jpg" alt="Mahfuz Anam Khan" class="avatar-placeholder" /> */
+    /* 🖼️ Replace the line below with your actual photo if you want:
+       <img src="yourphoto.jpg" alt="Mahfuz Anam Khan" class="avatar-placeholder" /> */
 
     .btn { display: inline-flex; align-items: center; gap: 10px; justify-content: center; padding: 10px 14px; border-radius: 10px; background: transparent; border: 1px solid rgba(255,255,255,0.04); color: var(--muted-dark); text-decoration: none; font-weight: 600; transition: all 0.3s; }
     .btn:hover { border-color: rgba(124,92,255,0.6); color: var(--accent-dark); }
@@ -68,7 +68,7 @@
         </div>
       </div>
       <nav>
-        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <span class="theme-toggle" id="themeToggle">☀️ Light</span>
       </nav>
@@ -76,18 +76,19 @@
 
     <main>
       <div class="hero">
-        <div class="card">
-          <h2>About</h2>
-          <p>Hello! I'm <strong>Mahfuz Anam Khan</strong>, an aspiring software engineer currently learning and building projects in web development and programming.</p>
+        <div class="card" id="about">
+          <h2>About Me</h2>
+          <p>Hello! I'm <strong>Mahfuz Anam Khan</strong>, an aspiring software engineer currently learning and building projects in web development and programming. I enjoy designing modern user interfaces and writing clean, creative code.</p>
         </div>
 
         <aside class="card right-card">
           <div class="avatar-placeholder">MA</div>
-          <!-- Replace the above div with your own profile image if you want -->
+          <!-- 🖼️ Replace the above line with your image:
+               <img src="yourphoto.jpg" alt="Mahfuz Anam Khan" class="avatar-placeholder" /> -->
           <p style="text-align:center; margin-top:12px;">HSC Batch 2026 • Aspiring Software Engineer</p>
           <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px;text-align:center;">
             <a class="btn" href="https://github.com/mahfuzanamkhan" target="_blank">GitHub</a>
-            <a class="btn" href="https://www.linkedin.com/in/mahfuzanamkhan" target="_blank">LinkedIn</a>
+            <a class="btn" href="https://linkedin.com/in/mahfuzanamkhan" target="_blank">LinkedIn</a>
             <a class="btn" href="mailto:mahfuzanamkhan@gmail.com">Email Me</a>
             <a class="btn" href="https://instagram.com/mahfuzanamkhann" target="_blank">Instagram</a>
           </div>
@@ -102,7 +103,7 @@
 
   <script>
     const toggle = document.getElementById('themeToggle');
-    toggle.addEventListener('click', ()=>{
+    toggle.addEventListener('click', () => {
       document.body.classList.toggle('light-mode');
       toggle.textContent = document.body.classList.contains('light-mode') ? '🌙 Dark' : '☀️ Light';
     });
